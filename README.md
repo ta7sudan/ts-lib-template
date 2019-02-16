@@ -1,2 +1,2 @@
-# ts-lib-template
-typescript library template for dulu
+# {{project}}
+A library template for dulu
