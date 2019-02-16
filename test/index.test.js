@@ -1,6 +1,7 @@
 import test from 'ava';{{if hasPuppeteer}}
 import puppeteerHelper from './_puppeteer';{{/if}}{{if hasPock}}
 import './_pock';{{/if}}
+// 还是不要直接测ts文件, 先编译成es6再测, AVA官方配置似乎也有点问题
 
 /* global todo */
 
