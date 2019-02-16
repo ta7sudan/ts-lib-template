@@ -10,7 +10,7 @@
   "typings": "types/index.d.ts",
   "scripts": {
     "build": "rollup -c",
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf dist types",
     "build-dev": "rollup -c rollup.dev.js",{{if hasPock}}
     "start": "concurrently \"rollup -w -c rollup.dev.js\" \"pock\" \"opn http://127.0.0.1:8080\"",{{/if}}
     "lint": "tslint -p tsconfig.json && eslint src{{if hasTest}} test{{/if}}",
@@ -40,12 +40,15 @@
     "types"
   ],
   "lint-staged": {
-    "*.js": [
-      "eslint"
-    ],
-    "*.ts": [
-      "tslint"
-    ]
+    "linters": {
+      "*.js": [
+        "eslint"
+      ],
+      "*.ts": [
+        "tslint"
+      ]
+    },
+    "ignore": ["**/*.d.ts"]
   },
   "husky": {
     "hooks": {

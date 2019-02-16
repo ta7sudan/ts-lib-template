@@ -5,7 +5,7 @@ import { relative } from 'path';
 import { name } from './package.json';
 
 export default {
-	input: 'src/index.js',
+	input: 'src/index.ts',
 	plugins: [
 		replace({
 			DEBUG: JSON.stringify(true)
