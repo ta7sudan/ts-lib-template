@@ -14,7 +14,7 @@
     "build-dev": "rollup -c rollup.dev.js",{{if hasPock}}
     "start": "concurrently \"rollup -w -c rollup.dev.js\" \"pock\" \"opn http://127.0.0.1:8080\"",{{/if}}
     "lint": "tslint -p tsconfig.json && eslint src{{if hasTest}} test{{/if}}",
-    "format": "prettier --config .prettierrc.js --write {src,test}/**/*.{js,ts}",
+    "format": "prettier --config .prettierrc.js --write {{if hasTest}}{src,test}/**/*.{js,ts}{{else}}src/**/*.{js,ts}{{/if}}",
     "inspect": "jsinspect src"{{if hasTest}},
     "test": "tsc --outDir test_cache && nyc ava -v",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
