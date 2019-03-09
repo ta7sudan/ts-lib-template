@@ -7,6 +7,11 @@
 	"jsRules": {},
 	"rules": {
 		"no-console": false,
+		"one-variable-per-declaration": false,
+		"no-unused-expression": false,
+		"no-bitwise": false,
+		"no-var-keyword": false,
+		"array-type": false,
 		"object-literal-sort-keys": false,
 		"interface-name": false,
 		"adjacent-overload-signatures": true,

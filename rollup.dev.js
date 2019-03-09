@@ -7,12 +7,12 @@ import { name } from './package.json';
 export default {
 	input: 'src/index.ts',
 	plugins: [
-		replace({
-			DEBUG: JSON.stringify(true)
-		}),
 		typescript({
 			tsconfig: 'tsconfig.json',
 			useTsconfigDeclarationDir: true
+		}),
+		replace({
+			DEBUG: JSON.stringify(true)
 		}),
 		babel({
 			exclude: 'node_modules/**'

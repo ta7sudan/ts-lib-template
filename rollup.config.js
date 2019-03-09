@@ -25,12 +25,12 @@ export default [
 	{
 		input: 'src/index.ts',
 		plugins: [
-			replace({
-				DEBUG: JSON.stringify(false)
-			}),
 			typescript({
 				tsconfig: 'tsconfig.json',
 				useTsconfigDeclarationDir: true
+			}),
+			replace({
+				DEBUG: JSON.stringify(false)
 			}),
 			babel({
 				exclude: 'node_modules/**'
@@ -60,12 +60,12 @@ export default [
 	{
 		input: 'src/index.ts',
 		plugins: [
-			replace({
-				DEBUG: JSON.stringify(false)
-			}),
 			typescript({
 				tsconfig: 'tsconfig.json',
 				useTsconfigDeclarationDir: true
+			}),
+			replace({
+				DEBUG: JSON.stringify(false)
 			}),
 			babel({
 				exclude: 'node_modules/**'
