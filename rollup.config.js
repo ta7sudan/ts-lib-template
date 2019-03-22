@@ -33,7 +33,8 @@ export default [
 				DEBUG: JSON.stringify(false)
 			}),
 			babel({
-				exclude: 'node_modules/**'
+				exclude: 'node_modules/**',
+				extensions: ['.js', '.ts']
 			})
 		],
 		external: ['todo'],
@@ -68,7 +69,8 @@ export default [
 				DEBUG: JSON.stringify(false)
 			}),
 			babel({
-				exclude: 'node_modules/**'
+				exclude: 'node_modules/**',
+				extensions: ['.js', '.ts']
 			}),
 			{{if compressTool === 'uglify'}}uglify({
 				compress: {
