@@ -13,7 +13,7 @@
     "prebuild": "rimraf dist types",
     "build-dev": "rollup -c rollup.dev.js",{{if hasPock}}
     "start": "concurrently \"rollup -w -c rollup.dev.js\" \"pock\" \"opn http://127.0.0.1:8080\"",{{/if}}
-    "lint": "tslint -p tsconfig.json && eslint src{{if hasTest}} test{{/if}}",
+    "lint": "eslint {{if hasTest}}{src,test}{{else}}src{{/if}}/**/*.{js,ts}",
     "format": "prettier --config .prettierrc.js --write {{if hasTest}}{src,test}/**/*.{js,ts}{{else}}src/**/*.{js,ts}{{/if}}",
     "inspect": "jsinspect src"{{if hasTest}},
     "test": "tsc --outDir test_cache && nyc ava -v",
@@ -45,7 +45,7 @@
         "eslint"
       ],
       "*.ts": [
-        "tslint"
+        "eslint"
       ]
     },
     "ignore": ["**/*.d.ts"]
@@ -80,6 +80,8 @@
     "@babel/polyfill": "^7.4.0",{{/if}}
     "@babel/preset-env": "^7.4.2",{{if hasTest}}
     "@babel/register": "^7.4.0",
+    "@typescript-eslint/eslint-plugin": "^1.5.0",
+    "@typescript-eslint/parser": "^1.5.0",
     "ava": "^1.4.1",{{/if}}
     "babel-plugin-array-includes": "^2.0.3",{{if hasTest}}
     "codecov": "^3.2.0",{{/if}}{{if hasPock}}
@@ -101,8 +103,6 @@
     "rollup-plugin-replace": "^2.1.1",{{if compressTool === 'uglify'}},
     "rollup-plugin-uglify": "^6.0.2",{{/if}}
     "rollup-plugin-typescript2": "^0.20.1",
-    "tslint": "^5.14.0",
-    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.3.4000"
   },
   "dependencies": {
