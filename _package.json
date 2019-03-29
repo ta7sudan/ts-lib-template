@@ -77,10 +77,10 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.4.0",{{if hasTest}}
-    "@babel/polyfill": "^7.2.5",{{/if}}
+    "@babel/polyfill": "^7.4.0",{{/if}}
     "@babel/preset-env": "^7.4.2",{{if hasTest}}
-    "@babel/register": "^7.0.0",
-    "ava": "^1.2.1",{{/if}}
+    "@babel/register": "^7.4.0",
+    "ava": "^1.4.1",{{/if}}
     "babel-plugin-array-includes": "^2.0.3",{{if hasTest}}
     "codecov": "^3.2.0",{{/if}}{{if hasPock}}
     "concurrently": "^4.1.0",{{/if}}
@@ -93,9 +93,9 @@
     "opn-cli": "^4.0.0",
     "pock": "^0.3.3",{{/if}}
     "prettier": "^1.16.4",{{if hasPuppeteer}}
-    "puppeteer": "^1.11.0",{{/if}}
+    "puppeteer": "^1.14.0",{{/if}}
     "rimraf": "^2.6.3",
-    "rollup": "^1.7.0",
+    "rollup": "^1.7.4",
     "rollup-plugin-babel": "^4.3.2",{{if compressTool === 'minify'}}
     "rollup-plugin-babel-minify": "^8.0.0",{{/if}}
     "rollup-plugin-replace": "^2.1.1",{{if compressTool === 'uglify'}},
