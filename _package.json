@@ -68,7 +68,7 @@
   "nyc": {
     "cache": true,
     "include": [
-      "dist/**/*.js"
+      "test_cache/**/*.js"
     ]
   },{{/if}}
   "homepage": "https://github.com/{{author}}/{{project}}#readme",
