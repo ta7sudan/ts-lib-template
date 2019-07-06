@@ -41,17 +41,6 @@
     "example",
     "types"
   ],
-  "lint-staged": {
-    "linters": {
-      "*.js": [
-        "eslint"
-      ],
-      "*.ts": [
-        "tslint"
-      ]
-    },
-    "ignore": ["**/*.d.ts"]
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged && npm run build && npm run build-dev && git add ."{{if !hasTravis&&hasTest}},
