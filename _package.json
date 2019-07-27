@@ -36,7 +36,6 @@
   },
   "files": [
     "src",
-    "man",
     "dist",
     "example",
     "types"
